@@ -1,0 +1,92 @@
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:800px) {
+    .edit100, .card {
+      width: 100%;
+      clear: both;
+    }
+}
+
+.home_btn {
+    float:left;
+    margin:1%;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+.home {
+    margin:0;
+    width:33.33%;
+}
+
+td {
+    padding: 15px;
+}
+
+body {
+    background-image:url("bg1.jpg");
+    background-size:cover;
+    background-position: center;
+    margin: 0;
+}
+
+.header {
+    background-color: #708090; /* or #778899 lighter */
+    padding: 20px;
+    text-align: center;
+    color:#fffafa;
+}
+
+.footer {
+    clear: both;
+    background-color: #F1F1F1;
+    padding:10px;
+    text-align:center;
+    color:#708090;
+}
+
+.figure {
+    display: block;
+    margin:0;
+    width:50%; /*52%*/
+    height:auto;
+    float:left;
+}
+
+.w3-card {
+    margin:auto;
+    width:25%;
+    float:left;
+}
+
+.members4 {
+    margin:0%;
+    width:25%;
+}
+
+.members3 {
+    margin:0%;
+    width:33.33%;
+}
+
+fieldset {
+    display: table;
+}
+
+fieldset p {
+    display: table-row;
+}
+
+fieldset select {
+    display: table-cell;
+}
+
+fieldset label {
+    text-align: right;
+}
+
+td, h1, h2 {
+    text-align:center;
+}

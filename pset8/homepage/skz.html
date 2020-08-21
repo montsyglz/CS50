@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="styles.css" rel="stylesheet">
+        <title>Stray Kids</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="index.html" class="btn btn-light btn home_btn" tabindex="-1" role="button">HOME</a>
+        <div class = "header">
+            <h2>Hello, we are Stray Kids!</h2>
+        </div>
+
+        <br />
+
+        <div class = "w3-row-padding">
+            <div class="w3-card w3-col w3-mobile">
+                <div class = "w3-container w3-section">
+                    <img src="skz/skz_gm.jpeg" class="figure-img img-fluid rounded img_fig" alt="Stray Kids Music Video God's Menu">
+                    <h5 >Latest Music Video God's Menu</h5>
+                    <p >They recently came out with a music video for their track called "God's Menu". Check it out!</p>
+                    <div class = "w3-section">
+                        <a href="https://youtu.be/TQTlCHxyuu8" target="_blank" class="w3-button w3-round-large w3-blue">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class = "figure w3-col w3-mobile">
+                <figure>
+                    <img src = "skz/Straykids_group_photo.jpg" class="figure-img img-fluid rounded img_fig" alt = "Members of Stray Kids" />
+                    <figcaption class="figure-caption text-center">Stage names from left to right: Seungmin, I.N., Hyunjin, Han, Lee Know, Bang Chan, Felix, Changbin</figcaption>
+                </figure>
+            </div>
+            <div class="w3-card w3-col w3-mobile">
+                <div class = "w3-container w3-section">
+                    <img src="skz/skz_spotify.jpg_cropX1=0&cropX2=1750&cropY1=649&cropY2=1816" class = "figure-img img-fluid rounded img_fig" alt="Stray Kids Spotify Picture">
+                    <h5>Check Out Their Music</h5>
+                    <p>Most of their work is self-produced! Check out their amazing discography.</p>
+                    <div class = "w3-section">
+                        <a href="https://open.spotify.com/artist/2dIgFjalVxs4ThymZ67YCE" target="_blank" class="w3-button w3-round-large w3-blue">Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class = "w3-row-padding w3-center">
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_bangchan.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Stray Kids Bang Chan">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "bc" onchange="getval(this.id);">
+                            <option value = "">Bang Chan</option>
+                            <option value = "Christopher Bang">Full Name</option>
+                            <option value = "October 3rd, 1997">Birthday</option>
+                            <option value = "Leader, Rapper, Vocal, Dancer, Producer, Composer">Position In Group</option>
+                            <option value = "He's Australian and he has a dog called Berry">Fun Fact</option>
+                        </select>
+                        <p id="bcW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_lino.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Stray Kids Lee Know">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "lk" onchange="getval(this.id);">
+                            <option value = "">Lee Know</option>
+                            <option value = "Lee Minho">Full Name</option>
+                            <option value = "October 25th, 1997">Birthday</option>
+                            <option value = "Rapper, Vocal, Dancer">Position In Group</option>
+                            <option value = "He was a backup dancer for the k-pop group BTS">Fun Fact</option>
+                        </select>
+                        <p id = "lkW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_bin.jpg" class="figure-img img-fluid rounded" alt = "Stray Kids Changbin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "cb" onchange="getval(this.id);">
+                            <option value = "">Changbin</option>
+                            <option value = "Seo Changbin">Full Name</option>
+                            <option value = "August 11th, 1999">Birthday</option>
+                            <option value = "Rapper, Vocal, Dancer, Producer, Composer">Position In Group</option>
+                            <option value = "He holds the record of being the fastest rapper in k-pop, with 11.13 syllables per second">Fun Fact</option>
+                        </select>
+                        <p id = "cbW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_hyunjin.jpg" class="figure-img img-fluid rounded" alt = "Stray Kids Hyunjin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "hj" onchange="getval(this.id);">
+                            <option value = "">Hyunjin</option>
+                            <option value = "Hwang Hyunjin">Full Name</option>
+                            <option value = "March 20th, 2000">Birthday</option>
+                            <option value = "Rapper, Vocal, Dancer">Position In Group</option>
+                            <option value = "He was bullied for not being a good dancer, but now he's the lead dancer">Fun Fact</option>
+                        </select>
+                        <p id = "hjW"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class = "w3-row-padding w3-center">
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_han.jpg" class="figure-img img-fluid rounded" alt = "Stray Kids Han">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "han" onchange="getval(this.id);">
+                            <option value = "">Han</option>
+                            <option value = "Han Jisung">Full Name</option>
+                            <option value = "September 14th, 2000">Birthday</option>
+                            <option value = "Rapper, Vocal, Dancer, Producer, Composer">Position In Group</option>
+                            <option value = "He lived six years in Malaysia, where he learned english">Fun Fact</option>
+                        </select>
+                        <p id = "hanW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_felix.jpg" class="figure-img img-fluid rounded" alt = "Stray Kids Felix">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "f" onchange="getval(this.id);">
+                            <option value = "">Felix</option>
+                            <option value = "Lee Felix">Full Name</option>
+                            <option value = "September 15th, 2000">Birthday</option>
+                            <option value = "Rapper, Vocal, Dancer">Position In Group</option>
+                            <option value = "He's Australian and he's known for his deep voice">Fun Fact</option>
+                        </select>
+                        <p id = "fW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_seungmin.jpg" class="figure-img img-fluid rounded" alt = "Stray Kids Seungmin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "sm" onchange="getval(this.id);">
+                            <option value = "">Seungmin</option>
+                            <option value = "Kim Seungmin">Full Name</option>
+                            <option value = "September 22nd, 2000">Birthday</option>
+                            <option value = "Vocal, Dancer">Position In Group</option>
+                            <option value = "He's a big fan of the k-pop band Day6">Fun Fact</option>
+                        </select>
+                        <p id = "smW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "skz/skz_in.jpg" class="figure-img img-fluid rounded" alt = "Stray Kids I.N.">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "in" onchange="getval(this.id);">
+                            <option value = "">I.N.</option>
+                            <option value = "Yang Jeongin">Full Name</option>
+                            <option value = "February 8th, 2001">Birthday</option>
+                            <option value = "Vocal, Dancer">Position In Group</option>
+                            <option value = "He was a model at the age of 7">Fun Fact</option>
+                        </select>
+                        <p id = "inW"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src = "skz.js"></script>
+        <br />
+        <div class = "footer">
+            <p>Montserrat González Alamán</p>
+        </div>
+    </body>
+</html>

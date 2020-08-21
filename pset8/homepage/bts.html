@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="styles.css" rel="stylesheet">
+        <title>BTS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="index.html" class="btn btn-light btn home_btn" tabindex="-1" role="button">HOME</a>
+        <div class = "header">
+            <h2>Hello, we are BTS!</h2>
+        </div>
+        <br />
+        <div class = "w3-row-padding">
+            <div class="w3-card w3-col w3-mobile">
+                <div class = "w3-container w3-section">
+                    <img src="bts/bts_on.jpg" class="figure-img img-fluid rounded img_fig" alt="BTS Music Video ON">
+                    <h5 >Their Latest Music Video ON</h5>
+                    <p >BTS came out with a music video for their song "ON" from the album Map of the Soul: 7. Check it out!</p>
+                    <div class = "w3-section">
+                        <a href="https://youtu.be/gwMa6gpoE9I" target="_blank" class="w3-button w3-round-large w3-blue">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class = "figure w3-col w3-mobile">
+                <figure>
+                    <img src = "bts/Bts_group_phot.jpg" class="figure-img img-fluid rounded img_fig" alt = "Members of BTS" />
+                    <figcaption class="figure-caption text-center">Stage names from left to right: V, Suga, Jungkook, Jin, Jimin, RM, J-Hope</figcaption>
+                </figure>
+            </div>
+            <div class="w3-card w3-col w3-mobile">
+                <div class = "w3-container w3-section">
+                    <img src="bts/bts_spotify.jpg" class="figure-img img-fluid rounded img_fig" alt="BTS Spotify Picture">
+                    <h5>Check Out Their Music</h5>
+                    <p>They have seven years worth of music. Check out their albums in spotify.</p>
+                    <div class = "w3-section">
+                        <a href="https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX" target="_blank" class="w3-button w3-round-large w3-blue">Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class = "w3-row-padding w3-center">
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_rm.jpg" class="figure-img img-fluid rounded" alt = "BTS RM">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "rm" onchange="getval(this.id);">
+                            <option value = "">RM</option>
+                            <option value = "Kim Namjoon">Full Name</option>
+                            <option value = "September 12th, 1994">Birthday</option>
+                            <option value = "Leader, Rapper, Dancer">Position In Group</option>
+                            <option value = "He learned english watching the tv series 'Friends'">Fun Fact</option>
+                        </select>
+                        <p id="rmW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_jin.jpg" class="figure-img img-fluid rounded" alt = "BTS Jin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "jin" onchange="getval(this.id);">
+                            <option value = "">Jin</option>
+                            <option value = "Kim Seokjin">Full Name</option>
+                            <option value = "December 4th, 1992">Birthday</option>
+                            <option value = "Vocal, Dancer">Position In Group</option>
+                            <option value = "One of his nicknames is 'Worldwide Handsome'">Fun Fact</option>
+                        </select>
+                        <p id = "jinW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_suga.jpg" class="figure-img img-fluid rounded" alt = "BTS Suga">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "suga" onchange="getval(this.id);">
+                            <option value = "">Suga</option>
+                            <option value = "Min Yoongi">Full Name</option>
+                            <option value = "March 9th, 1993">Birthday</option>
+                            <option value = "Rapper, Dancer">Position In Group</option>
+                            <option value = "His name as a solo artist is 'Agust D'">Fun Fact</option>
+                        </select>
+                        <p id = "sugaW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_jhope.jpg" class="figure-img img-fluid rounded" alt = "BTS J-Hope">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "jh" onchange="getval(this.id);">
+                            <option value = "">J-Hope</option>
+                            <option value = "Jung Hoseok">Full Name</option>
+                            <option value = "February 18th, 1994">Birthday</option>
+                            <option value = "Rapper, Dancer">Position In Group</option>
+                            <option value = "He has a Shih Tzu dog called 'Mickey'">Fun Fact</option>
+                        </select>
+                        <p id = "jhW"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class = "w3-row-padding w3-center">
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_jimin.jpg" class="figure-img img-fluid rounded" alt = "BTS Jimin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "jm" onchange="getval(this.id);">
+                            <option value = "">Jimin</option>
+                            <option value = "Park Jimin">Full Name</option>
+                            <option value = "October 13th, 1995">Birthday</option>
+                            <option value = "Vocal, Dancer">Position In Group</option>
+                            <option value = "He composed a song called 'Promise'">Fun Fact</option>
+                        </select>
+                        <p id = "jmW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_tae.jpg" class="figure-img img-fluid rounded" alt = "BTS V">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "v" onchange="getval(this.id);">
+                            <option value = "">V</option>
+                            <option value = "Kim Taehyung">Full Name</option>
+                            <option value = "December 30th, 1995">Birthday</option>
+                            <option value = "Vocal, Dancer">Position In Group</option>
+                            <option value = "He holds the record for any group or solo artist with the most iTunes Top Songs charts with his self-produced OST 'Sweet Night'">Fun Fact</option>
+                        </select>
+                        <p id = "vW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members4 w3-quarter w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "bts/bts_jk.jpg" class="figure-img img-fluid rounded" alt = "BTS Jin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "jk" onchange="getval(this.id);">
+                            <option value = "">Jungkook</option>
+                            <option value = "Jeon Jungkook">Full Name</option>
+                            <option value = "September 1st, 1997">Birthday</option>
+                            <option value = "Vocal, Dancer">Position In Group</option>
+                            <option value = "He debuted with BTS at the age of 15">Fun Fact</option>
+                        </select>
+                        <p id = "jkW"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src = "bts.js"></script>
+        <br />
+        <div class = "footer">
+            <p>Montserrat González Alamán</p>
+        </div>
+    </body>
+</html>

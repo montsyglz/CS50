@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="styles.css" rel="stylesheet">
+        <title>Day6</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a href="index.html" class="btn btn-light btn home_btn" tabindex="-1" role="button">HOME</a>
+        <div class = "header">
+            <h2>Hello, we are Day6!</h2>
+        </div>
+
+        <br />
+
+        <div class = "w3-row-padding">
+            <div class="w3-card w3-col w3-mobile">
+                <div class = "w3-container w3-section">
+                    <img src="day6/day6_zombie.jpeg" class="figure-img img-fluid rounded img_fig" alt="Day6 Music Video Zombie">
+                    <h5 >Latest Music Video Zombie</h5>
+                    <p >Recently came out with a melancholic music video of their track "Zombie". Check it out!</p>
+                    <div class = "w3-section">
+                        <a href="https://youtu.be/k8gx-C7GCGU" target="_blank" class="w3-button w3-round-large w3-blue">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class = "figure w3-col w3-mobile">
+                <figure>
+                    <img src = "day6/Day6_group_photo.jpg" class="figure-img img-fluid rounded img_fig" alt = "Members of Day6" />
+                <figcaption class="figure-caption text-center">Stage names from left to right: Sungjin, Wonpil, Young K, Jae, Dowoon</figcaption>
+                </figure>
+            </div>
+            <div class="w3-card w3-col w3-mobile">
+                <div class = "w3-container w3-section">
+                    <img src="day6/day6_spotify.png" class="figure-img img-fluid rounded img_fig" alt="Day6 Spotify Picture">
+                    <h5>Check Out Their Music</h5>
+                    <p>They are a k-rock band with one of the best discographies out there. Check them out!</p>
+                    <div class = "w3-section">
+                        <a href="https://open.spotify.com/artist/5TnQc2N1iKlFjYD7CPGvFc" target="_blank" class="w3-button w3-round-large w3-blue">Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class = "w3-row-padding w3-center">
+            <table class = "members3 w3-third w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "day6/day6_sungjin.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Day6 Sungjin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "sj" onchange="getval(this.id);">
+                            <option value = "">Sungjin</option>
+                            <option value = "Park Sungjin">Full Name</option>
+                            <option value = "January 16th, 1993">Birthday</option>
+                            <option value = "Leader, Vocal, Guitarist, Composer">Position In Group</option>
+                            <option value = "The vocal coaches from the company didn't have anything to teach him, since he's a great vocalist">Fun Fact</option>
+                        </select>
+                        <p id="sjW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members3 w3-third w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "day6/day6_jae.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Day6 Jae">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "jae" onchange="getval(this.id);">
+                            <option value = "">Jae</option>
+                            <option value = "Jae Park">Full Name</option>
+                            <option value = "September 15th, 1992">Birthday</option>
+                            <option value = "Vocal, Guitarist, Composer">Position In Group</option>
+                            <option value = "He's American, but was born in Buenos Aires, Argentina">Fun Fact</option>
+                        </select>
+                        <p id = "jaeW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members3 w3-third w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "day6/day6_brian.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Day6 Young K">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "yk" onchange="getval(this.id);">
+                            <option value = "">Young K</option>
+                            <option value = "Kang Younghyun">Full Name</option>
+                            <option value = "December 19th, 1993">Birthday</option>
+                            <option value = "Vocal, Bassist, Rapper, Composer">Position In Group</option>
+                            <option value = "He studied english in Canada">Fun Fact</option>
+                        </select>
+                        <p id = "ykW"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class = "w3-row-padding w3-center">
+            <table class = "members3 w3-third w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "day6/day6_wonpil.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Day6 Wonpil">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "w" onchange="getval(this.id);">
+                            <option value = "">Wonpil</option>
+                            <option value = "Kim Wonpil">Full Name</option>
+                            <option value = "April 28th, 1994">Birthday</option>
+                            <option value = "Vocal, Keyboard player">Position In Group</option>
+                            <option value = "He's a close friend of GOT7's Jinyoung">Fun Fact</option>
+                        </select>
+                        <p id = "wW"></p>
+                    </td>
+                </tr>
+            </table>
+            <table class = "members3 w3-third w3-mobile">
+                <tr>
+                    <td>
+                        <img src = "day6/day6_dowoon.jpg" class="figure-img img-fluid rounded" style = "object-fit: cover;" alt = "Day6 Dowoon">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id = "dw" onchange="getval(this.id);">
+                            <option value = "">Dowoon</option>
+                            <option value = "Yoon Dowoon">Full Name</option>
+                            <option value = "August 25th, 1995">Birthday</option>
+                            <option value = "Drummer">Position In Group</option>
+                            <option value = "He's Catholic and his baptist name is Paul">Fun Fact</option>
+                        </select>
+                        <p id = "dwW"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src = "day6.js"></script>
+        <br />
+        <div class = "footer">
+            <p>Montserrat González Alamán</p>
+        </div>
+    </body>
+</html>
