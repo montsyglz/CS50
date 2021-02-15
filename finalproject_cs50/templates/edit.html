@@ -1,0 +1,32 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+    <h3>Edit your task</h3>
+    <br/>
+    <form action="/tasks" method="post">
+            <div class="input-group mb-3">
+              <select name="project" class="custom-select">
+                <option>Choose project this task corresponds to.</option>
+                {% for row in projects %}
+                  <option value="{{ row[0] }}" {% if row[0] == project %} selected {% endif %}>{{ row[0] }}</option>
+                {% endfor %}
+              </select>
+                <input type="text" aria-label="Task" class="form-control" name="task" value ="{{ task }}" placeholder="Write the Task">
+                <input type="hidden" name="old task" value="{{ task }}" />
+            </div>
+            <div class="input-group">
+                <input type="text" aria-label="Due Date" class="form-control" name="date" value ="{{ date }}" placeholder="YYYY-MM-DD">
+                <select name="priority" class="custom-select">
+                  <option>Choose priority</option>
+                  <option value="1" {% if priority == 1 %} selected {% endif %}>High &#128165</option>
+                  <option value="2" {% if priority == 2 %} selected {% endif %}>Medium &#129472</option>
+                  <option value="3" {% if priority == 3 %} selected {% endif %}>Low &#128167</option>
+                </select>
+                <button class="btn btn-outline-secondary" type="submit" name="update" id="button-addon2">Enter</button>
+            </div>
+        </form>
+{% endblock %}

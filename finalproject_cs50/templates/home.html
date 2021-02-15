@@ -1,0 +1,39 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <main>
+        <h1>What project will you be working on?</h1>
+        <br/>
+        <form action = "/home" method = "post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="projectname" placeholder="Enter project name" aria-label="Enter project name" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enter</button>
+            </div>
+        </form>
+        <br/>
+        <h4>
+            Your Personal Projects
+            <small class="text-muted">and number of tasks</small>
+        </h4>
+        <ul class="list-group">
+            {% if num_proj == 0 %}
+                <div class="card">
+                  <div class="card-body">
+                    You have no personal projects registered.
+                  </div>
+                </div>
+            {% endif %}
+            {% for project in list_proj %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ project[0] }}
+                    <span class="badge bg-primary rounded-pill">{{ project[1] }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+{% endblock %}

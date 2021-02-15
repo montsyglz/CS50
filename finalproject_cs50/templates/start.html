@@ -1,0 +1,27 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Start
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-7">
+            <figure class="figure">
+                <img src="/static/photos/pexels-startup-stock-photos-212286 (2).jpg" class="figure-img img-fluid rounded" alt="Man planning a project.">
+                <figcaption class="figure-caption">Photo by Startup Stock Photos from Pexels.</figcaption>
+            </figure>
+        </div>
+        <div class="col-5 my-auto">
+            <form action = "/register" method = "get">
+                <button class="btn btn-primary btn-lg" type="submit" >Register</button>
+            </form>
+            <br/><br/>
+            <form action = "/login" method = "get">
+                <button class="btn btn-primary btn-lg" type="submit" href="/login">Log In</button>
+            </form>
+            <br/><br/>
+            <p class="text-monospace">Here you'll be able to plan out whatever projects you've got going on!</p>
+        </div>
+    </div>
+{% endblock %}

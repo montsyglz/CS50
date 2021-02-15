@@ -1,0 +1,99 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block main %}
+        <h3>What task do you need to get done?</h3>
+        <br/>
+        <form action="/tasks" method="post">
+            <div class="input-group mb-3">
+              <select name="project" class="custom-select">
+                <option selected disabled hidden>Choose project this task corresponds to.</option>
+                {% for project in projects %}
+                  <option value="{{ project[0] }}">{{ project[0] }}</option>
+                {% endfor %}
+              </select>
+
+                <input type="text" aria-label="Task" class="form-control" name="task" placeholder="Write the Task">
+            </div>
+            <div class="input-group">
+                <input type="text" aria-label="Due Date" class="form-control" name="date" placeholder="YYYY-MM-DD">
+                <select name="priority" class="custom-select">
+                  <option selected disabled hidden>Choose priority</option>
+                    <option value="1">High &#128165	</option>
+                    <option value="2">Medium &#129472</option>
+                    <option value="3">Low &#128167</option>
+                </select>
+                <button class="btn btn-outline-secondary" type="submit" name="insert" id="button-addon2">Enter</button>
+            </div>
+        </form>
+        <br/>
+        <h4>
+          Your Tasks
+        </h4>
+        <form action="/tasks" method="post">
+          <div class="row">
+            <div class="col-11">
+              <select name="option" class="custom-select">
+                <option selected>All Tasks</option>
+                {% for project in projects %}
+                  <option value="{{ project[1] }}">{{ project[0] }}</option>
+                {% endfor %}
+                <option value="TU">Tasks Unfinished</option>
+                <option value="TC">Tasks Completed</option>
+              </select>
+            </div>
+            <div class="col-1">
+              <button type="submit" name="filter" class="btn btn-secondary btn-sm">Filter</button>
+            </div>
+          </div>
+        </form>
+        <br/>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Done</th>
+              <th scope="col">Task</th>
+              <th scope="col">Due Date</th>
+              <th scope="col">Priority</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in tasks %}
+            <tr>
+              <form action="/tasks" method="post">
+                {% if row[3] == 0 %}
+                  <th scope="row">
+                    <button type="submit" name = "not done" class="btn btn-outline-light">&#11036</button>
+                  </th>
+                {% elif row[3] == 1 %}
+                  <th scope="row">
+                    <button type="submit" name = "done" class="btn btn-outline-light">&#9989</button>
+                  </th>
+                {% endif %}
+                <td>{{ row[0] }}</td>
+                <input type="hidden" name="writtentask" value="{{ row[0] }}" />
+                <td>{{ row[1] }}</td>
+                {% if row[2] == 1 %}
+                  <td>High &#128165</td>
+                {% elif row[2] == 2 %}
+                  <td>Medium &#129472</td>
+                {% else %}
+                  <td>Low &#128167</td>
+                {% endif %}
+                <td>
+                  <button type="submit" name="edit" class="btn btn-secondary btn-sm">&#128395</button>
+                </td>
+                <td>
+                  <button type="submit" name ="delete" class="btn btn-secondary btn-sm">&#10006</button>
+                </td>
+              </form>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+{% endblock %}
